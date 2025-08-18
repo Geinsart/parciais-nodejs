@@ -7,6 +7,18 @@
 
     <h1>HOME</h1>
 
+    
+     <% if (conteudoBlog.length > 0) { %>
+        <% conteudoBlog.forEach(conteudo => { %>
+
+            <h3 class= "titulo"><%= conteudo.titulo %></h3>
+            <p class = "conteudo"><%= conteudo.conteudo %></p>
+
+        <% }) %>
+         <% } else {  %>
+            <p>A página está vazia</p>
+       <% } %>
+
     <%- include('./parciais/footer.ejs') %>
 </body>
 </html>
